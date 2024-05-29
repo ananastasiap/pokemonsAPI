@@ -1,3 +1,4 @@
+"use client";
 // import Image from "next/image";
 import type { ReactNode } from "react";
 import { StoreProvider } from "./StoreProvider";
@@ -5,6 +6,7 @@ import { StoreProvider } from "./StoreProvider";
 import { Raleway } from "next/font/google";
 
 import "./styles/globals.scss";
+import { MainContainer } from "./components/MainContainer/MainContainer";
 
 const raleway = Raleway({
   subsets: ["cyrillic", "latin"],
@@ -18,7 +20,9 @@ export default function RootLayout({ children }: Props) {
   return (
     <StoreProvider>
       <html lang="en">
-        <body className={raleway.className}></body>
+        <body className={raleway.className}>
+          <MainContainer />
+        </body>
       </html>
     </StoreProvider>
   );
