@@ -49,7 +49,6 @@ export const Button: React.FC<ButtonProps> = ({ onPokemonSelect }) => {
             color: "#fff",
             background: "#1986EC",
             borderRadius: "44px",
-            fontFamily: "'Raleway', sans-serif",
             ":hover": {
               background: "#4fa2ef",
             },

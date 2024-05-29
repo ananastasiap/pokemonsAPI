@@ -61,6 +61,8 @@ export const PokemonContainer: React.FC<{ selectedPokemonName: string }> = ({
       </Typography>
       <Box
         component="img"
+        width={150}
+        height={150}
         src={pokemonItem.data.sprites.other?.["official-artwork"].front_default}
         alt="Pokemon image"
         loading="eager"
