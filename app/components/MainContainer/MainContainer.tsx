@@ -5,11 +5,11 @@ import { Button } from "./containerComponents/Button";
 import { PokemonContainer } from "./containerComponents/PokemonContainer";
 import { WelcomeContainer } from "./containerComponents/WelcomeContainer";
 import { ThemeProvider, createTheme } from "@mui/material";
-import { raleway } from "@/app/layout";
+// import { raleway } from "@/app/layout";
 
 const theme = createTheme({
   typography: {
-    fontFamily: [raleway, "sans-serif"].join(","),
+    fontFamily: ["Raleway", "sans-serif"].join(","),
   },
 });
 

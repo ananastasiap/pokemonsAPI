@@ -5,7 +5,7 @@ import { Raleway } from "next/font/google";
 
 import "./styles/globals.scss";
 
-export const raleway = Raleway({
+const raleway = Raleway({
   subsets: ["cyrillic", "latin"],
   weight: ["500", "600", "700"],
 });
