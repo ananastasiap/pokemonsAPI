@@ -5,7 +5,11 @@ import { useAppDispatch, useAppSelector } from "@/lib/hooks";
 import { getPokemonList } from "@/app/api/getPokemonList";
 import { setPokemonList } from "@/lib/pokemonsSlices/pokemonsSlice";
 
-export const Button: React.FC = () => {
+interface ButtonProps {
+  onPokemonSelect: (id: string) => void;
+}
+
+export const Button: React.FC<ButtonProps> = ({ onPokemonSelect }) => {
   const dispatch = useAppDispatch();
   const pokemonList = useAppSelector((state) => state.mainScreen.pokemonList);
 
@@ -33,6 +37,7 @@ export const Button: React.FC = () => {
           component="button"
           label={pokemon.name}
           key={id}
+          onClick={() => onPokemonSelect(pokemon.name)}
           sx={{
             color: "white",
             background: "#1986EC",
