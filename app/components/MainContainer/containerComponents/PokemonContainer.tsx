@@ -37,13 +37,27 @@ export const PokemonContainer: React.FC<{ selectedPokemonName: string }> = ({
   };
 
   return (
-    <Grid container content="section" direction="column">
-      <Typography variant="h2">{pokemonItem.data.name}</Typography>
+    <Grid
+      container
+      content="section"
+      direction="column"
+      sx={{
+        maxWidth: "484px",
+        gap: "40px",
+        padding: "44px",
+        color: "#A0A0A0",
+        backgroundColor: "#000",
+      }}
+    >
+      <Typography variant="h2" sx={{ textTransform: "capitalize" }}>
+        {pokemonItem.data.name}
+      </Typography>
       <Box
         component="img"
         src={pokemonItem.data.sprites.other?.["official-artwork"].front_default}
         alt="Pokemon image"
         loading="eager"
+        sx={{ width: "150px", height: "auto" }}
       />
       <Box>
         <Typography variant="body1">

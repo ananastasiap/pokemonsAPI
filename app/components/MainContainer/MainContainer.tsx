@@ -14,7 +14,17 @@ export const MainContainer: React.FC = () => {
   };
 
   return (
-    <Grid container content="main">
+    <Grid
+      container
+      content="main"
+      justifyContent="space-between"
+      alignItems="center"
+      sx={{
+        "@media (max-width: 1135px)": {
+          justifyContent: "center",
+        },
+      }}
+    >
       <Button onPokemonSelect={handlePockemonSelect} />
       {selectedPokemonName !== null && (
         <PokemonContainer selectedPokemonName={selectedPokemonName} />
