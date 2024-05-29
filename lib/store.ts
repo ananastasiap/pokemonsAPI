@@ -1,8 +1,13 @@
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import type { Action, ThunkAction } from "@reduxjs/toolkit";
-import { combineSlices, configureStore } from "@reduxjs/toolkit";
+import pokemonsSlice from "./pokemonsSlices/pokemonsSlice";
 
-const rootReducer = combineSlices();
+const rootReducer = combineReducers({
+  mainScreen: pokemonsSlice,
+});
+
 export type RootState = ReturnType<typeof rootReducer>;
+
 export const makeStore = () => {
   return configureStore({
     reducer: rootReducer,
