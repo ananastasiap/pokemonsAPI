@@ -21,7 +21,17 @@ export const Header: React.FC = () => {
       <Grid item>
         <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
           <Box component="img" src="/cursor.png" />
-          <Box component="p" sx={{ margin: "0px", lineHeight: "100%" }}>
+          <Box
+            component="p"
+            sx={{
+              margin: "0px",
+              lineHeight: "100%",
+
+              "@media (max-width: 325px)": {
+                marginTop: "5vh",
+              },
+            }}
+          >
             Нажмите на
             <br />
             нужного Покемона

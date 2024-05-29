@@ -47,6 +47,10 @@ export const PokemonContainer: React.FC<{ selectedPokemonName: string }> = ({
         padding: "40px 44px 16px 44px",
         color: "#A0A0A0",
         backgroundColor: "#000",
+
+        "@media (max-width: 1135px)": {
+          marginTop: "5vh",
+        },
       }}
     >
       <Typography
