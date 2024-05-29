@@ -6,7 +6,7 @@ import { getPokemonList } from "@/app/api/getPokemonList";
 import { setPokemonList } from "@/lib/pokemonsSlices/pokemonsSlice";
 
 interface ButtonProps {
-  onPokemonSelect: (id: string) => void;
+  onPokemonSelect: (name: string) => void;
 }
 
 export const Button: React.FC<ButtonProps> = ({ onPokemonSelect }) => {
@@ -31,7 +31,11 @@ export const Button: React.FC<ButtonProps> = ({ onPokemonSelect }) => {
   };
 
   return (
-    <Grid component="section" container sx={{ gap: "8px", maxWidth: "450px" }}>
+    <Grid
+      component="section"
+      container
+      sx={{ gap: "8px", maxWidth: "484px", marginTop: "129px" }}
+    >
       {pokemonList.map((pokemon, id) => (
         <Chip
           component="button"
@@ -39,11 +43,11 @@ export const Button: React.FC<ButtonProps> = ({ onPokemonSelect }) => {
           key={id}
           onClick={() => onPokemonSelect(pokemon.name)}
           sx={{
-            color: "white",
-            background: "#1986EC",
-            fontSize: "20px",
             height: "60px",
             padding: "20px 10px",
+            fontSize: "20px",
+            color: "#fff",
+            background: "#1986EC",
             borderRadius: "44px",
             ":hover": {
               background: "#4fa2ef",

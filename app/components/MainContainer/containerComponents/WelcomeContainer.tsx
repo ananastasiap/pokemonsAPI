@@ -5,18 +5,14 @@ export const WelcomeContainer: React.FC = () => {
   return (
     <Grid
       container
-      content="section"
+      component="section"
       justifyContent="center"
       alignItems="center"
       sx={{
         maxWidth: "484px",
-        height: "486px",
+        height: "500px",
         padding: "44px",
         backgroundColor: "#000",
-
-        "@media (max-width: 1135px)": {
-          marginTop: "5vh",
-        },
       }}
     >
       <Box

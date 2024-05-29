@@ -39,17 +39,24 @@ export const PokemonContainer: React.FC<{ selectedPokemonName: string }> = ({
   return (
     <Grid
       container
-      content="section"
+      component="section"
       direction="column"
       sx={{
         maxWidth: "484px",
         gap: "40px",
-        padding: "44px",
+        padding: "40px 44px 16px 44px",
         color: "#A0A0A0",
         backgroundColor: "#000",
       }}
     >
-      <Typography variant="h2" sx={{ textTransform: "capitalize" }}>
+      <Typography
+        variant="h2"
+        sx={{
+          textTransform: "capitalize",
+          fontWeight: "700",
+          fontSize: "48px",
+        }}
+      >
         {pokemonItem.data.name}
       </Typography>
       <Box
@@ -57,17 +64,51 @@ export const PokemonContainer: React.FC<{ selectedPokemonName: string }> = ({
         src={pokemonItem.data.sprites.other?.["official-artwork"].front_default}
         alt="Pokemon image"
         loading="eager"
-        sx={{ width: "150px", height: "auto" }}
+        sx={{ width: "150px", height: "auto", margin: "15px auto 0 auto" }}
       />
-      <Box>
-        <Typography variant="body1">
+      <Box
+        sx={{
+          marginTop: "38px",
+        }}
+      >
+        <Typography
+          variant="body1"
+          sx={{
+            fontWeight: "500",
+            fontSize: "17px",
+            lineHeight: "150%",
+          }}
+        >
           Снялся в {pokemonItem.data.moves.length} сериях
         </Typography>
-        <Typography variant="body1">id: {pokemonItem.data.id}</Typography>
-        <Typography variant="body1">
+        <Typography
+          variant="body1"
+          sx={{
+            fontWeight: "500",
+            fontSize: "17px",
+            lineHeight: "150%",
+          }}
+        >
+          id: {pokemonItem.data.id}
+        </Typography>
+        <Typography
+          variant="body1"
+          sx={{
+            fontWeight: "500",
+            fontSize: "17px",
+            lineHeight: "150%",
+          }}
+        >
           height: {pokemonItem.data.height}
         </Typography>
-        <Typography variant="body1">
+        <Typography
+          variant="body1"
+          sx={{
+            fontWeight: "500",
+            fontSize: "17px",
+            lineHeight: "150%",
+          }}
+        >
           attack:{" "}
           {pokemonItem.data.stats &&
             pokemonItem.data.stats[1] &&
