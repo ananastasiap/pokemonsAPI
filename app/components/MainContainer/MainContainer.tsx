@@ -3,6 +3,7 @@ import { useState } from "react";
 import Grid from "@mui/material/Grid";
 import { Button } from "./containerComponents/Button";
 import { PokemonContainer } from "./containerComponents/PokemonContainer";
+import { WelcomeContainer } from "./containerComponents/WelcomeContainer";
 
 export const MainContainer: React.FC = () => {
   const [selectedPokemonName, setSelectedPokemonName] = useState<string | null>(
@@ -26,8 +27,10 @@ export const MainContainer: React.FC = () => {
       }}
     >
       <Button onPokemonSelect={handlePockemonSelect} />
-      {selectedPokemonName !== null && (
+      {selectedPokemonName !== null ? (
         <PokemonContainer selectedPokemonName={selectedPokemonName} />
+      ) : (
+        <WelcomeContainer />
       )}
     </Grid>
   );
