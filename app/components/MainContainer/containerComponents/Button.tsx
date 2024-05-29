@@ -1,3 +1,4 @@
+"use client";
 import { useEffect } from "react";
 import { Chip, Grid } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "@/lib/hooks";
