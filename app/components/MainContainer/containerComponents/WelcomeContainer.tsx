@@ -14,6 +14,10 @@ export const WelcomeContainer: React.FC = () => {
         height: "500px",
         padding: "44px",
         backgroundColor: "#000",
+
+        "@media (max-width: 1135px)": {
+          marginTop: "5vh",
+        },
       }}
     >
       <Box

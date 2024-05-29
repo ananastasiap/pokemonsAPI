@@ -31,6 +31,10 @@ export const MainContainer: React.FC = () => {
         sx={{
           maxWidth: "980px",
           margin: "0 auto",
+
+          "@media (max-width: 1135px)": {
+            justifyContent: "center",
+          },
         }}
       >
         <Button onPokemonSelect={handlePockemonSelect} />

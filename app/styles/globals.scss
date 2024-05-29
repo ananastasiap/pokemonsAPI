@@ -17,3 +17,15 @@ a {
 * {
   box-sizing: border-box;
 }
+
+@media (max-width: 1005px) {
+  body {
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+}
+@media (max-width: 525px) {
+  body {
+    padding: 53px 35px;
+  }
+}
